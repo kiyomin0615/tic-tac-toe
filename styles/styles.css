@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    color: rgb(44, 41, 44);
+    background-color: rgb(247, 239, 247);
+}
+
+header {
+    background-color: rgb(140, 0, 255);
+    color: white;
+    /* 마진과 패딩의 퍼센트(%) 값은 언제나 부모 요소의 가로 크기(width)에 비례한다 */
+    padding: 2rem 5%;
+    /* 텍스트 수평 중앙 정렬 */
+    text-align: center;
+}
+
+.btn {
+    font: inherit;
+    padding: .5rem 1.5rem;
+    background-color: rgb(140, 0, 255);
+    border: 1px solid rgb(140, 0, 255);
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: rgb(79, 10, 190);
+    border-color: rgb(79, 10, 190);
+}
+
+.btn-alt {
+    background-color: transparent;
+    border-color: transparent;
+    color: rgb(140, 0, 255);
+}
+.btn-alt:hover {
+    background-color: rgb(230, 201, 252);
+    border-color: transparent;
+}
+

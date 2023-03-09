@@ -1,0 +1,39 @@
+/* 요소의 쌓임 순서 */
+/* 1. position */
+/* 2. z-index */
+/* 3. 더 나중에 작성된 요소 */
+/* .modal 요소 > #backdrop 요소 */
+.modal {
+    /* 오버레이(모달)의 위치는 뷰포트를 기준으로 고정된다 */
+    position: fixed;
+    top: 20%;
+    left: 5%;
+    width: 90%;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .2);
+
+    /* 자바스크립트로 조절 */
+    display: none;
+}
+
+#backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+
+    /* 자바스크립트로 조절 */
+    display: none;
+}
+
+@media (min-width: 48rem) {
+    .modal {
+        /* 중앙 배치 방법 */
+        width: 40rem;
+        left: calc(50% - 20rem);
+    }
+}

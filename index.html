@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="stylesheet" href="./styles/modal.css">
+    <link rel="stylesheet" href="./styles/configuration.css">
+    <link rel="stylesheet" href="./styles/game.css">
+</head>
+<body>
+    <!-- #backdrop -->
+    <!-- 오버레이(모달)가 표시됐을 때 오버레이 바깥, 즉 화면의 다른 영역을 흑백 처리하기 위한 요소 -->
+    <div id="backdrop"></div>
+
+    <!-- header -->
+    <header>
+        <h1>Play Tic, Tac, Toe</h1>
+        <p>Built with HTML, CSS, JavaScript and - of course - lots of love!</p>
+    </header>
+
+    <!-- main -->
+    <main>
+        <!-- .modal -->
+        <aside class="modal" id="configuration-overlay">
+            <h2>Choose your name</h2>
+            <form>
+                <div class="form-control">
+                    <label for="playername">Player name</label>
+                    <input type="text" name="playername" id="playername">
+                </div>
+                <div>
+                    <!-- 제출용 버튼 아님 -->
+                    <button type="button" class="btn btn-alt">Cancel</button>
+                    <!-- 제출용 버튼 -->
+                    <button type="submit" class="btn">Confirm</button>
+                </div>
+            </form>
+        </aside>
+
+        <!-- #game-configuration -->
+        <section id="game-configuration">
+            <ol>
+                <li>
+                    <article>
+                        <h2>Player 1</h2>
+                        <h3>PLAYER NAME</h3>
+                        <div class="symbol">X</div>
+                        <button class="btn btn-alt">Edit</button>
+                    </article>
+                </li>
+                <li>
+                    <article>
+                        <h2>Player 2</h2>
+                        <h3>PLAYER NAME</h3>
+                        <div class="symbol">O</div>
+                        <button class="btn btn-alt">Edit</button>
+                    </article>
+                </li>
+            </ol>
+            <button class="btn">Start New Game</button>
+        </section>
+
+        <!-- #active-game -->
+        <section id="active-game">
+            <!-- #game-over -->
+            <article id="game-over">
+                <h2>You won, <span id="winner-name">PLAYER NAME</span>!</h2>
+                <p>Click "Start New Game" above, to start a new game!</p>
+            </article>
+
+            <p>It's your turn <span id="active-player-name">PLAYER NAME</span>!</p>
+            <ol id="game-board">
+                <li class="disabled"></li>
+                <li></li>
+                <li class="disabled"></li>
+
+                <li></li>
+                <li class="disabled"></li>
+                <li></li>
+
+                <li class="disabled"></li>
+                <li></li>
+                <li class="disabled"></li>
+            </ol>
+        </section>
+    </main>
+</body>
+</html>
