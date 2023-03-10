@@ -15,6 +15,10 @@
     <link rel="stylesheet" href="./styles/modal.css">
     <link rel="stylesheet" href="./styles/configuration.css">
     <link rel="stylesheet" href="./styles/game.css">
+
+    <script defer src="./scripts/configuration.js"></script>
+    <script defer src="./scripts/game.js"></script>
+    <script defer src="./scripts/app.js"></script>
 </head>
 <body>
     <!-- #backdrop -->
@@ -29,18 +33,20 @@
 
     <!-- main -->
     <main>
-        <!-- .modal -->
+        <!-- .modal#configuration-overlay -->
         <aside class="modal" id="configuration-overlay">
             <h2>Choose your name</h2>
+
             <form>
                 <div class="form-control">
                     <label for="playername">Player name</label>
-                    <input type="text" name="playername" id="playername">
+                    <input type="text" name="playername" id="playername" required>
                 </div>
+                <p id="configuration-error"></p>
                 <div>
-                    <!-- 제출용 버튼 아님 -->
-                    <button type="button" class="btn btn-alt">Cancel</button>
-                    <!-- 제출용 버튼 -->
+                    <!-- 취소(리셋) 버튼 -->
+                    <button type="reset" class="btn btn-alt" id="cancel-overlay">Cancel</button>
+                    <!-- 제출 버튼 -->
                     <button type="submit" class="btn">Confirm</button>
                 </div>
             </form>
@@ -50,19 +56,20 @@
         <section id="game-configuration">
             <ol>
                 <li>
-                    <article>
+                    <article id="player-1-data">
                         <h2>Player 1</h2>
                         <h3>PLAYER NAME</h3>
                         <div class="symbol">X</div>
-                        <button class="btn btn-alt">Edit</button>
+                        <!-- data-key 속성 -->
+                        <button class="btn btn-alt" id="edit-player-1" data-playerid="1">Edit</button>
                     </article>
                 </li>
                 <li>
-                    <article>
+                    <article id="player-2-data">
                         <h2>Player 2</h2>
                         <h3>PLAYER NAME</h3>
                         <div class="symbol">O</div>
-                        <button class="btn btn-alt">Edit</button>
+                        <button class="btn btn-alt" id="edit-player-2" data-playerid="2">Edit</button>
                     </article>
                 </li>
             </ol>

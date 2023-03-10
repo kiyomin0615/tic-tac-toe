@@ -3,7 +3,8 @@
 /* 2. z-index */
 /* 3. 더 나중에 작성된 요소 */
 /* .modal 요소 > #backdrop 요소 */
-.modal {
+
+.modal#configuration-overlay {
     /* 오버레이(모달)의 위치는 뷰포트를 기준으로 고정된다 */
     position: fixed;
     top: 20%;
