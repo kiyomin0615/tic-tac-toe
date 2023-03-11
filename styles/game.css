@@ -4,7 +4,7 @@
     margin: 2rem 0 5rem 0;
 
     /* 자바스크립트로 조절 */
-    /* display: none; */
+    display: none;
 }
 
 #active-game #game-over {
@@ -19,7 +19,7 @@
     border-radius: 4px;
 
     /* 자바스크립트로 조절 */
-    /* display: none; */
+    display: none;
 }
 
 #active-game #game-over h2 {
@@ -61,7 +61,7 @@ ol#game-board li:hover {
 }
 
 /* 자바스크립트로 조절 */
-ol#game-board li.disabled {
+ol#game-board li.selected {
     background-color: rgb(112, 13, 204);
     color: white;
     cursor: default;

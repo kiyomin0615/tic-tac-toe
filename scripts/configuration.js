@@ -3,9 +3,8 @@
 // app.js 파일에서 사용할 수 있다
 
 function openConfigurationOverlay(event) {
-    // event.target: #edit-player-# 요소
-    // dataset: 요소에 추가된 data-key 속성의 집합
-    // playerid: key
+    // gevent.taret: #edit-player-# 요소
+    // dataset: 요소 객체(DOM)에 data-key 속성으로 추가한 데이터(key-value) 집합
     // + 연산자를 통해서 문자열("1", "2")을 숫자(1, 2)로 변환
     editedPlayer = +event.target.dataset.playerid; // 1 or 2
     
